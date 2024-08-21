@@ -8,7 +8,7 @@ The project follows a simple and organized architecture:
 
 - **features/**: Contains feature files written in Gherkin syntax, which define the test scenarios.
 - **pages/**: Holds page object classes, which encapsulate the website's pages and provide methods for interacting with them.
-- **utils/**: Contains utility files, such as `conftest.py`, which provides fixtures and setup/teardown functions for tests.
+- **utils/**: Contains utility files, which provides fixtures and setup/teardown functions for tests.
 - **requirements.txt**: Lists the project's dependencies, including Pytest, Selenium, and other required libraries.
 - **test_files.py**: Contains test functions that execute the test scenarios defined in the feature files.
 
@@ -25,19 +25,19 @@ Selenium is an automation tool that allows us to interact with web browsers prog
 ### Page Object Pattern
 The Page Object pattern is a design pattern that helps to organize test code by encapsulating the website's pages into separate classes. This makes it easier to maintain and update tests as the website changes.
 
-### Github Actions
-Github Actions is a continuous integration and continuous deployment (CI/CD) tool that allows us to automate the execution of tests on every push to the repository. This ensures that the tests are run consistently and reliably.
-
 ### Black
 Black is code formatter that checks Python code for errors, warnings, and best practices. It helps to maintain code quality and consistency throughout the project.
 
 ## Getting Started
 To get started with this project, follow these steps:
 
+This is necessary to run: Python 3 and Chrome.
+
 1. Clone the repository: `git clone https://github.com/Aureojj/SWAG-LABS-TEST.git`
 2. Install the dependencies: `pip install -r requirements.txt`
 3. Run the tests: `pytest`
-4. Explore the feature files and page object classes to understand how the tests are organized and executed.
+4. Run the Black: `black .`
+5. Explore the feature files and page object classes to understand how the tests are organized and executed.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more information.
