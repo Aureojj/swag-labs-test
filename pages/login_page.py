@@ -13,8 +13,7 @@ class LoginPage:
         self.driver.find_element(By.ID, "login-button").click()
 
     def is_logged_in(self):
-        return self.driver.find_element(
-            By.ID, "inventory_container").is_displayed()
+        return self.driver.find_element(By.ID, "inventory_container").is_displayed()
 
     def logout(self):
         self.driver.find_element(By.ID, "react-burger-menu-btn").click()

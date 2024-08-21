@@ -7,7 +7,7 @@ from utils.constants import TEST_USER, TEST_PASSWORD, CHECKOUT_FORM_DATA
 
 
 def login(driver):
-    """Login with a valid username and password"""
+    """Login with a valid username and password."""
     login_page = LoginPage(driver)
     login_page.login(TEST_USER, TEST_PASSWORD)
 
@@ -19,14 +19,14 @@ def add_product(driver):
 
 
 def view_cart(driver):
-    """View product in the cart"""
+    """View product in the cart."""
     cart_page = CartPage(driver)
     cart_page.view_cart()
     cart_page.checkout()
 
 
 def test_fill_checkout_form(driver):
-    """Test the completion of the checkout form"""
+    """Test the completion of the checkout form."""
     login(driver)
     checkout_page = CheckoutPage(driver)
     checkout_page.go_direct_to_checkout()
@@ -36,7 +36,7 @@ def test_fill_checkout_form(driver):
 
 
 def test_complete_checkout(driver):
-    """Test the complete checkout flow"""
+    """Test the complete checkout flow."""
     login(driver)
     add_product(driver)
     view_cart(driver)
@@ -45,8 +45,7 @@ def test_complete_checkout(driver):
     checkout_page.next_checkout_step()
     assert checkout_page.is_on_checkout_step_two()
     # Check the values on the checkout page
-    inventory_name = driver.find_element(
-        By.CSS_SELECTOR, ".inventory_item_name")
+    inventory_name = driver.find_element(By.CSS_SELECTOR, ".inventory_item_name")
     item_value = driver.find_element(By.CSS_SELECTOR, ".inventory_item_price")
     tax_value = driver.find_element(By.CSS_SELECTOR, ".summary_tax_label")
     total_value = driver.find_element(By.CSS_SELECTOR, ".summary_total_label")

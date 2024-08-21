@@ -4,7 +4,7 @@ from selenium import webdriver
 
 @pytest.fixture
 def driver():
-    driver = webdriver.Chrome()
+    driver = webdriver.Remote("http://standalone:4444/wd/hub", options=webdriver.ChromeOptions())
     driver.get("https://www.saucedemo.com/")
     yield driver
     driver.quit()

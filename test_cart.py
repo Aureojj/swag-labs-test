@@ -5,13 +5,13 @@ from utils.constants import TEST_USER, TEST_PASSWORD
 
 
 def login(driver):
-    """Login with a valid username and password"""
+    """Login with a valid username and password."""
     login_page = LoginPage(driver)
     login_page.login(TEST_USER, TEST_PASSWORD)
 
 
 def test_add_product_to_cart(driver):
-    """Test to validate the flow of adding products"""
+    """Test to validate the flow of adding products."""
     login(driver)
     products_page = ProductsPage(driver)
     products_page.add_product_to_cart()
@@ -19,7 +19,7 @@ def test_add_product_to_cart(driver):
 
 
 def test_remove_product_from_cart(driver):
-    """Test to validate the flow of removing products"""
+    """Test to validate the flow of removing products."""
     login(driver)
     products_page = ProductsPage(driver)
     products_page.add_product_to_cart()
@@ -28,7 +28,7 @@ def test_remove_product_from_cart(driver):
 
 
 def test_view_cart(driver):
-    """Test to validate the flow cart view"""
+    """Test to validate the flow cart view."""
     login(driver)
     cart_page = CartPage(driver)
     cart_page.view_cart()
@@ -37,7 +37,7 @@ def test_view_cart(driver):
 
 
 def test_go_to_checkout(driver):
-    """Test to validate redirection to checkout"""
+    """Test to validate redirection to checkout."""
     login(driver)
     cart_page = CartPage(driver)
     cart_page.view_cart()
