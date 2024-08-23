@@ -1,7 +1,7 @@
 # SWAG-LABS-TEST
 
 ## Overview
-This repository contains a test project for validating the success flow of the website Sauce Demo using the username `standard_user`. The project utilizes **Behavior-Driven Development (BDD)** for scenario specification, **Pytest-bdd** for test execution, and **Selenium** for interacting with the website's interface. The **Page Object pattern** is used as a strategy for organizing test code.
+This repository contains a test project for validating the success flow of the website Sauce Demo using the username `standard_user`. The project utilizes **Behavior-Driven Development (BDD)** for scenario specification, **Pytest-bdd** for test execution, and **Selenium** for interacting with the website's interface. The **Page Object pattern** is used as a strategy for organizing page elements.
 
 ## Architecture
 The project follows a simple and organized architecture:
@@ -29,7 +29,7 @@ The Page Object pattern is a design pattern that helps to organize test code by 
 Is a popular open source tool for visualizing the results of a test run. It can be added to your testing workflow with little to zero configuration. It produces reports that can be opened anywhere and can be read by anyone, no deep technical knowledge required.
 
 ### Python Black
-Is code formatter that checks Python code for errors, warnings, and best practices. It helps to maintain code quality and consistency throughout the project.
+Is a code formatter that checks Python code for errors, warnings, and best practices. It helps to maintain code quality and consistency throughout the project.
 
 ## Github Actions
 GitHub Actions is an automation tool that lets you create customised workflows for compiling, testing and deploying your code directly from GitHub. It helps automate repetitive tasks, improve development efficiency and ensure project consistency and quality.
@@ -48,7 +48,7 @@ This is necessary to run: Python ^3.10, Poetry, Docker.
 ## Access the report
 
 1. Run the Allure generate: `allure generate`
-2. Run the Allure Server: `allure server`
+2. Run the Allure Server: `allure serve`
 
 
 #### Explore the feature files and page object classes to understand how the tests are organized and executed.
