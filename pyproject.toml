@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "swag-labs-functional-tests"
+version = "0.1.0"
+description = ""
+authors = ["Jose Aureo <jose.sleite@pagar.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^8.3.2"
+pytest-bdd = "^7.2.0"
+selenium = "^4.23.1"
+allure-pytest-bdd = "^2.13.5"
+black = "^24.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = '.'
+addopts = [
+    "--alluredir", "report/allure-results",
+    "--clean-alluredir",
+    "--cucumberjson", "report/cucumber.json"
+]
