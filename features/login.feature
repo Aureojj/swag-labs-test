@@ -1,11 +1,11 @@
 Feature: Login
-  As a user
-  I want to log in to the application
+  As a standard user
+  I want to log in to the Sauce Demo site
   So that I can access the inventory page
 
   Scenario: Successful login
     Given I am on the login page
-    When I enter username "standard_user" and password "secret_sauce"
+    When I enter the username
+    And I enter the password
     And I click the login button
-    Then I should be logged in
-    And I should be on the inventory page
+    Then I should be redirected to the inventory page
