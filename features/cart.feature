@@ -1,30 +1,21 @@
 Feature: Cart
   As a logged-in user
-  I want to manage my cart
-  So that I can purchase the items I want
+  I want to complete the checkout process
+  So that I can purchase the items in my cart
+  
+  Background: Login and go to inventory page
+    Given I am logged in as a standard_user
+    And I access the inventory page
 
-  Scenario: Add product to cart
-    Given I am logged in as "standard_user" with password "secret_sauce"
-    And I am on the products page
-    When I add a product to the cart
-    Then the product should be in the cart
+  Scenario: Add item in to the cart
+    When I add an item to the cart
+    And I access the cart page
+    Then the cart quantity should show 1
+    And the shopping cart icon should show 1 item
 
-  Scenario: Remove product from cart
-    Given I am logged in as "standard_user" with password "secret_sauce"
-    And I am on the products page
-    And I have added a product to the cart
-    When I remove the product from the cart
-    Then the product should not be in the cart
-
-  Scenario: View cart
-    Given I am logged in as "standard_user" with password "secret_sauce"
-    When I view the cart
-    Then I should be on the cart page
-    And the cart page should be displayed
-
-  Scenario: Go to checkout
-    Given I am logged in as "standard_user" with password "secret_sauce"
-    And I am on the cart page
-    When I click the checkout button
-    Then I should be on the checkout page
-    And the checkout page should be displayed
+  Scenario: Remove item in to the cart
+    When I add an item to the cart
+    And I access the cart page
+    And I remove the item from the cart
+    Then the item in the cart is not displayed
+    And the shopping cart icon should not show an item

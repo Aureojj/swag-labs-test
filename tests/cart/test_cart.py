@@ -1,4 +1,4 @@
-from pytest_bdd import scenarios, given, when, then
+from pytest_bdd import scenarios, when, then
 from pages.cart_page import CartPage
 
 scenarios("../../features/cart.feature")

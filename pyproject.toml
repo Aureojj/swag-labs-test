@@ -21,7 +21,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.pytest.ini_options]
 pythonpath = '.'
 addopts = [
-    "--alluredir", "report/allure-results",
+    "--alluredir", "allure-results",
     "--clean-alluredir",
-    "--cucumberjson", "report/cucumber.json"
+    "--cucumberjson", "cucumber.json"
 ]

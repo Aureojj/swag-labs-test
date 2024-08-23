@@ -54,3 +54,9 @@ jobs:
 
       - name: Run functional tests
         run: poetry run pytest
+    
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: test-report
+            path: report/
